@@ -1,12 +1,13 @@
 package autonoma.models;
 
+import autonoma.models.*;
 import java.time.LocalDate;
 
 /**
  *
  * @author Juan David Arcila
  * @fecha 10/15/2024
- * @version 1.0.0
+ * @version 1.1.0
  */
 public class Hospital {
 
@@ -19,6 +20,7 @@ public class Hospital {
     private LocalDate fechaFundacion;
     private double presupuesto;
     private double metaVentasAnual;
+    private Gerente gerente;
     
 //    METODOS DE ACCESO
 
