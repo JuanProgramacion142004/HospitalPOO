@@ -4,33 +4,16 @@ package autonoma.models;
  *
  * @author Juan David Arcila
  * @fecha 10/15/2024
- * @version 1.0.0
+ * @version 2.0.0
  */
-public class Gerente {
+public class Gerente extends Persona {
 
 //    ATRIBUTOS
-    private String nombre;
-    private String numeroDocumento;
     private String carrera;
-    private int edad;
+
     
 //    METODOS DE ACCESO
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getnumeroDocumento() {
-        return numeroDocumento;
-    }
-
-    public void setnumeroDocumento(String numeroDocumento) {
-        this.numeroDocumento = numeroDocumento;
-    }
 
     public String getCarrera() {
         return carrera;
@@ -40,28 +23,24 @@ public class Gerente {
         this.carrera = carrera;
     }
 
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-    
 //    METODOS
 
-    public Gerente(String nombre, String numeroDocumento, String carrera, int edad) {
-        this.nombre = nombre;
-        this.numeroDocumento = numeroDocumento;
+    public Gerente(String nombre, String numeroDocumento, int edad, String carrera) {
+        super(nombre, numeroDocumento, edad);
         this.carrera = carrera;
-        this.edad = edad;
     }
 
-    @Override
-    public String toString() {
-        return "Gerente{" + "nombre=" + nombre + ", numeroDocumento=" + numeroDocumento + ", carrera=" + carrera + ", edad=" + edad + '}';
+    
+
+    public void actualizarGerente(String nombre, String numeroDocumento, int edad, String carrera){
+        setNombre(nombre);
+        setNumeroDocumento(numeroDocumento);
+        setEdad(edad);
+        this.carrera = carrera;
     }
     
-    
+    public String obtenerTipoPersona(){
+        return "GERENTE";
+    }
     
 }

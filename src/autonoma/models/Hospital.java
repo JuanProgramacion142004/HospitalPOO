@@ -87,6 +87,15 @@ public class Hospital {
     public void setMetaVentasAnual(double metaVentasAnual) {
         this.metaVentasAnual = metaVentasAnual;
     }
+
+    public Gerente getGerente() {
+        return gerente;
+    }
+
+    public void setGerente(Gerente gerente) {
+        this.gerente = gerente;
+    }
+    
     
     
 //    METODOS 
