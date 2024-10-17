@@ -9,8 +9,8 @@ package autonoma.models;
 public class MedicamentoGenerico extends Medicamento {
 
 //    METODOS     
-    public MedicamentoGenerico(String nombre, String descripcion, double costo, double precioVenta) {
-        super(nombre, descripcion, costo, precioVenta);
+    public MedicamentoGenerico(String nombre, String descripcion, double costo, double precioVenta, Enfermedad enfermedadObjetivo) {    
+        super(nombre, descripcion, costo, precioVenta, enfermedadObjetivo);
     }
 
 //    METODOS ABSTRACTOS

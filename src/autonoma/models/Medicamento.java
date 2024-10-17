@@ -13,6 +13,7 @@ public abstract class Medicamento {
     protected String descripcion;
     protected double costo;
     protected double precioVenta;
+    protected Enfermedad enfermedadObjetivo;
 
 //    METODOS DE ACCESO
     public String getNombre() {
@@ -47,12 +48,21 @@ public abstract class Medicamento {
         this.precioVenta = precioVenta;
     }
 
+    public Enfermedad getEnfermedadObjetivo() {
+        return enfermedadObjetivo;
+    }
+
+    public void setEnfermedadObjetivo(Enfermedad enfermedadObjetivo) {
+        this.enfermedadObjetivo = enfermedadObjetivo;
+    }
+
 //    METODOS 
-    public Medicamento(String nombre, String descripcion, double costo, double precioVenta) {
+    public Medicamento(String nombre, String descripcion, double costo, double precioVenta, Enfermedad enfermedadObjetivo) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.costo = costo;
         this.precioVenta = precioVenta;
+        this.enfermedadObjetivo = enfermedadObjetivo; 
     }
 
 //    METODOS ABSTRACTOS

@@ -19,10 +19,12 @@ public class MedicamentoDeMarca extends Medicamento {
     }
 
 //    METODOS 
-    public MedicamentoDeMarca(String fabricante, String nombre, String descripcion, double costo, double precioVenta) {
-        super(nombre, descripcion, costo, precioVenta);
+
+    public MedicamentoDeMarca(String fabricante, String nombre, String descripcion, double costo, double precioVenta, Enfermedad enfermedadObjetivo) {
+        super(nombre, descripcion, costo, precioVenta, enfermedadObjetivo);
         this.fabricante = fabricante;
     }
+    
 
 //    METODOS ABSTRACTOS
     @Override
