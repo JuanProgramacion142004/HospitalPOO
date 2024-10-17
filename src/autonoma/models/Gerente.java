@@ -3,8 +3,8 @@ package autonoma.models;
 /**
  *
  * @author Juan David Arcila
- * @fecha 10/15/2024
- * @version 2.0.0
+ * @fecha 10/16/2024
+ * @version 2.0.1
  */
 public class Gerente extends Persona {
 
@@ -39,6 +39,7 @@ public class Gerente extends Persona {
         this.carrera = carrera;
     }
     
+    @Override
     public String obtenerTipoPersona(){
         return "GERENTE";
     }

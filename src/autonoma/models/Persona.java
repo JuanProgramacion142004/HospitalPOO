@@ -3,15 +3,15 @@ package autonoma.models;
 /**
  *
  * @author Juan David Arcila
- * @fecha 10/15/2024
+ * @fecha 10/16/2024
  * @version 1.0.0
  */
 public abstract class Persona {
 //    ATRIBUTOS
 
-    String nombre;
-    String numeroDocumento;
-    int edad;
+    private String nombre;
+    private String numeroDocumento;
+    private int edad;
 
 //    METODOS DE ACCESO
     public String getNombre() {
