@@ -3,8 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/theBL/OneDrive/Documentos/NetBeansProjects/Hospital/src/autonoma/models/Gerente.java</file>
-            <file>file:/C:/Users/theBL/OneDrive/Documentos/NetBeansProjects/Hospital/src/autonoma/models/Hospital.java</file>
+            <file>file:/C:/Users/theBL/OneDrive/Documentos/NetBeansProjects/Hospital/src/autonoma/models/Localizacion.java</file>
+            <file>file:/C:/Users/theBL/OneDrive/Documentos/NetBeansProjects/Hospital/src/autonoma/models/Inventario.java</file>
+            <file>file:/C:/Users/theBL/OneDrive/Documentos/NetBeansProjects/Hospital/src/autonoma/models/Reporte.java</file>
+            <file>file:/C:/Users/theBL/OneDrive/Documentos/NetBeansProjects/Hospital/src/autonoma/models/Paciente.java</file>
+            <file>file:/C:/Users/theBL/OneDrive/Documentos/NetBeansProjects/Hospital/src/autonoma/models/CitaMedica.java</file>
+            <file>file:/C:/Users/theBL/OneDrive/Documentos/NetBeansProjects/Hospital/src/autonoma/models/Venta.java</file>
+            <file>file:/C:/Users/theBL/OneDrive/Documentos/NetBeansProjects/Hospital/src/autonoma/models/MedicamentoDeMarca.java</file>
+            <file>file:/C:/Users/theBL/OneDrive/Documentos/NetBeansProjects/Hospital/src/autonoma/models/Nomina.java</file>
         </group>
     </open-files>
 </project-private>
