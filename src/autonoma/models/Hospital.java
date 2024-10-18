@@ -1,5 +1,6 @@
 package autonoma.models;
 
+import autonoma.excepciones.PresupuestoNegativoException;
 import autonoma.models.*;
 import java.time.LocalDate;
 
@@ -117,8 +118,25 @@ public class Hospital {
             this.estado = "ACTIVO";
             System.out.println("El hospital ha subsanado su deuda y ahora esta activo");
         }
-    }  
-    
+    } 
+        public void descontarPresupuesto(double monto) throws PresupuestoNegativoException {
+        presupuesto -= monto;
+        if (presupuesto < 0) {
+            throw new PresupuestoNegativoException("El hospital ha entrado en quiebra. Presupuesto negativo: " + presupuesto);
+        }
+    }
+            // Verificar si las ventas superan la meta anual
+        if (ventasAnuales > metaVentasAnual) {
+            // Lanza la excepción si se supera la meta
+            throw new FestividadException("¡Se ha superado la meta anual! Evento de festividad activado.");
+        }
+    }
+
+    public void aumentarPresupuestoPorFestividad() {
+        // Aumentar el presupuesto en un 10%
+        presupuesto += presupuesto * 0.10;
+        System.out.println("Presupuesto incrementado en un 10% por la celebración.");
+    }
     
 
 }

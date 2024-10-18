@@ -8,6 +8,9 @@ package autonoma.excepciones;
  *
  * @author lejouuu
  */
-public class PresupuestoNegativoException {
-    
+public class PresupuestoNegativoException extends Exception {
+    public PresupuestoNegativoException(String mensaje) {
+        super(mensaje);
+    }
 }
+
