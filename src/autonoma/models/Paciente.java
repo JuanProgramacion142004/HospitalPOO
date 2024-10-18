@@ -1,7 +1,7 @@
-package autonoma.models;
+  package autonoma.models;
 
 import java.util.ArrayList;
-
+import java.util.List;
 /**
  *
  * @author Juan David Arcila
@@ -15,6 +15,7 @@ public class Paciente extends Persona {
     private String telefono;
     private String estado; // Saludable o Crítico
     private ArrayList<Enfermedad> enfermedades;
+    private List<Medicamento> medicinas;
 
 // METODOS DE ACCESO
     public String getCorreoElectronico() {
@@ -58,14 +59,30 @@ public class Paciente extends Persona {
         this.enfermedades = new ArrayList<>();
     }
 
-    public void curarEnfermedad(Medicamento medicamento, Enfermedad enfermedad) {
-        if (enfermedades.contains(enfermedad)) {
-            enfermedades.remove(enfermedad);
-            System.out.println("La enfermedad " + enfermedad.getNombre() + " ha sido curada con " + medicamento.getNombre());
-            // Aquí se puede agregar el medicamento a una lista de medicamentos tomados por el paciente
-        } else {
-            System.out.println("El paciente no tiene la enfermedad " + enfermedad.getNombre() + ".");
+    public void curarEnfermedad(String nombreEnfermedad, Medicamento medicamento) throws EnfermedadNoExistenteException, MedicamentoRecetadoException {
+        Enfermedad enfermedadCurada = null;
+
+        // Buscar la enfermedad en la lista
+        for (Enfermedad e : enfermedades) {
+            if (e.getNombre().equalsIgnoreCase(nombreEnfermedad)) {
+                enfermedadCurada = e;
+                break;
+            }
         }
+     // si la enfermedad no existe
+      if (enfermedadCurada == null) {
+            throw new EnfermedadNoExistenteException("El paciente no tiene registrada la enfermedad: " + nombreEnfermedad);
+        }
+     // se verifica si el medicamento ya ha sido recetado
+      for (Medicamento med : medicinas) {
+            if (med.getNombre().equalsIgnoreCase(medicamento.getNombre())) {
+                throw new MedicamentoRecetadoException("El medicamento " + medicamento.getNombre() + " ya fue recetado.");
+            }
+        }
+       // Curar la enfermedad
+        enfermedades.remove(enfermedadCurada);
+        medicinas.add(medicamento);
+        System.out.println("Enfermedad " + nombreEnfermedad + " curada con el medicamento " + medicamento.getNombre());
 
         // Actualizar estado del paciente
         if (enfermedades.isEmpty()) {
